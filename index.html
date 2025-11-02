@@ -3135,15 +3135,16 @@
           <h4>Kepada<br>Yth. Bpk/Ibu/Saudara/i</h4>
           <h4 id="desc_cover_2">Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir di acara pernikahan kami.</h4>
           <div id="name-guest">
-            <h2>ppppp</h2>
+            <h2>Kepada Yth. <span id="namaTamu"></span></h2>
             <p>Mohon maaf apabila ada salah penulisan nama, gelar, dsb.</p>
-            <script type="text/javascript">
-              var qrcode = "ppppp";
-              $('#desc_cover_2').remove();
-              if (top_cover) {
-                $('.content-modal').css('top', '25%');
-              }
-            </script>
+                <script>
+                  // Ambil parameter "to" dari URL
+                  const params = new URLSearchParams(window.location.search);
+                  const toName = params.get('to') || 'Tamu Undangan';
+                
+                  // Tampilkan di halaman
+                  document.getElementById('namaTamu').textContent = toName;
+                </script>
           </div>
         </div>
       </div>
